@@ -1,0 +1,680 @@
+{
+  "remedies": [
+    {
+      "id": "acid_phos",
+      "name": "Acid Phos",
+      "decisive_symptoms": [
+        "Strong desire for cold refreshing drinks.",
+        "Anger++ when forced to answer"
+      ],
+      "other_behaviors": [
+        "Fever after suppressed skin eruptions.",
+        "Mental weakness followed by physical.",
+        "Aversion to dry food."
+      ]
+    },
+    {
+      "id": "anacardium",
+      "name": "Anacardium",
+      "decisive_symptoms": [
+        "Sudden loss of memory, brain fog.",
+        "Heard voices far away or of the dead."
+      ],
+      "other_behaviors": [
+        "Sensation of band or hoop.",
+        "Great desire for stool passes without effort.",
+        "Loss of appetite."
+      ]
+    },
+    {
+      "id": "ant_tart",
+      "name": "Ant-Tart",
+      "decisive_symptoms": [
+        "Excessive weakness.",
+        "Excessive perspiration and sleep."
+      ],
+      "other_behaviors": [
+        "Irritability.",
+        "Thirstless or sips of water often.",
+        "Aversion to milk."
+      ]
+    },
+    {
+      "id": "antim_crud",
+      "name": "Antim Crud",
+      "decisive_symptoms": [
+        "Though Chilly, aggravated by the Sun.",
+        "Desire sour which aggravates."
+      ],
+      "other_behaviors": [
+        "Gastric disturbances.",
+        "Aversion to people, oversensitive and sentimental.",
+        "Make verses."
+      ]
+    },
+    {
+      "id": "apis",
+      "name": "Apis",
+      "decisive_symptoms": [
+        "Oedema and dominating anger.",
+        "Associated urinary symptoms."
+      ],
+      "other_behaviors": [
+        "Aphasia with fever.",
+        "Sadness, indifferent, and stuporous.",
+        "Shrieking in sleep."
+      ]
+    },
+    {
+      "id": "arg_met",
+      "name": "Arg Met",
+      "decisive_symptoms": [
+        "Bad effects from Mercury Syphilis.",
+        "Sexual excess and restless anxiety."
+      ],
+      "other_behaviors": [
+        "Vertigo on seeing flowing water.",
+        "Discharges think, gray, tenacious or like boiled starch.",
+        "Copious, frequent urination."
+      ]
+    },
+    {
+      "id": "arg_nit",
+      "name": "Arg.Nit",
+      "decisive_symptoms": [
+        "Impulsive and hurried.",
+        "Frequent Loss of Memory."
+      ],
+      "other_behaviors": [
+        "Unable to walk with closed eyes.",
+        "Belching accompanies gastric complaints.",
+        "Suicidal tendency."
+      ]
+    },
+    {
+      "id": "arnica",
+      "name": "Arnica",
+      "decisive_symptoms": [
+        "Antagonism with family members.",
+        "Ailments from financial embarrassment, physical trauma."
+      ],
+      "other_behaviors": [
+        "Bruised feeling, everything feels too hard.",
+        "Afraid of being approached.",
+        "Echymosis."
+      ]
+    },
+    {
+      "id": "arsenic",
+      "name": "Arsenic",
+      "decisive_symptoms": [
+        "Desires warm food, drinks and sips of water.",
+        "Fastidious."
+      ],
+      "other_behaviors": [
+        "Anxiety about health.",
+        "Weakness and midnight aggravation.",
+        "Conscientious"
+      ]
+    },
+    {
+      "id": "baryta_carb",
+      "name": "Baryta-Carb",
+      "decisive_symptoms": [
+        "Functional deficiency of mind and body.",
+        "Averse to strangers."
+      ],
+      "other_behaviors": [
+        "Reduced mental capacity of thinking.",
+        "The patient appears timid and answers foolishly.",
+        "Misplaced anxiety."
+      ]
+    },
+    {
+      "id": "belladona",
+      "name": "Belladona",
+      "decisive_symptoms": [
+        "Suddenness and redness.",
+        "Desires lemonades."
+      ],
+      "other_behaviors": [
+        "Heat and congestion.",
+        "Sensitivity to light, jar and noise.",
+        "Sudden pains and complaints."
+      ]
+    },
+    {
+      "id": "bryonia",
+      "name": "Bryonia",
+      "decisive_symptoms": [
+        "Dry and motionless.",
+        "Business minded."
+      ],
+      "other_behaviors": [
+        "Lying motionless but not sleepy.",
+        "Diligent, conscientious.",
+        "Hard stools."
+      ]
+    },
+    {
+      "id": "calcarea_carb",
+      "name": "Calcarea Carb",
+      "decisive_symptoms": [
+        "Want mother’s touch.",
+        "Desires eggs and sweets."
+      ],
+      "other_behaviors": [
+        "Extreme thirst.",
+        "Desires touch, company and protection.",
+        "Perspiration, cold, clammy and profuse."
+      ]
+    },
+    {
+      "id": "cannabis_indica",
+      "name": "Cannabis Indica",
+      "decisive_symptoms": [
+        "Vivacious speech.",
+        "Too much laughing."
+      ],
+      "other_behaviors": [
+        "Talks on one subject, especially science.",
+        "Makes verses",
+        "Chilly"
+      ]
+    },
+    {
+      "id": "carbo_veg",
+      "name": "Carbo-Veg",
+      "decisive_symptoms": [
+        "Stasis of all systems.",
+        "Wants fan."
+      ],
+      "other_behaviors": [
+        "Feels unfortunate.",
+        "Quiet, slow, confused, sad, and silent.",
+        "Flatulence with jaundice in past."
+      ]
+    },
+    {
+      "id": "chamomilla",
+      "name": "Chamomilla",
+      "decisive_symptoms": [
+        "Uncivil and snappish.",
+        "Desires to be carried."
+      ],
+      "other_behaviors": [
+        "Mental and Physical offensiveness.",
+        "One cheek red, the other hot.",
+        "Intolerance to pain."
+      ]
+    },
+    {
+      "id": "china",
+      "name": "China",
+      "decisive_symptoms": [
+        "Sensitivity to touch.",
+        "Periodicity and desires fruit."
+      ],
+      "other_behaviors": [
+        "Irritation seen on the face.",
+        "Sensation as if everything is hindering or tormenting.",
+        "Sensitive to noise."
+      ]
+    },
+    {
+      "id": "cina",
+      "name": "Cina",
+      "decisive_symptoms": [
+        "Boring nose.",
+        "Cranky, piteous crying."
+      ],
+      "other_behaviors": [
+        "Temporary relief when carried with abdomen over shoulder.",
+        "Boring in any of the orifices.",
+        "Capricious and cranky."
+      ]
+    },
+    {
+      "id": "coffea",
+      "name": "Coffea",
+      "decisive_symptoms": [
+        "Vivacious, timid and benevolent.",
+        "Easily overjoyed, easily saddened."
+      ],
+      "other_behaviors": [
+        "Make plans for the future.",
+        "Talks irrationally during fever.",
+        "Talks of pleasant scenes and surroundings."
+      ]
+    },
+    {
+      "id": "colocynth",
+      "name": "Colocynth",
+      "decisive_symptoms": [
+        "Ailments from anger, indignation and mortification.",
+        "Suppressed anger causes neuralgia and spasm"
+      ],
+      "other_behaviors": [
+        "Pasmodic pains.",
+        "Pains come in wave-like form.",
+        "Abdominal pains are better by bending double."
+      ]
+    },
+    {
+      "id": "eupatorium_perfoliatum",
+      "name": "Eupatorium Perfoliatum",
+      "decisive_symptoms": [
+        "Extreme thirst for cold water.",
+        "Severe bone pains"
+      ],
+      "other_behaviors": [
+        "Vomiting",
+        "Fever with 25 hrs periodicity.",
+        "Desire warm drinks sometimes."
+      ]
+    },
+    {
+      "id": "ferum_met",
+      "name": "Ferum Met",
+      "decisive_symptoms": [
+        "Reddish discoloration.",
+        "Strong, positive and conscientious."
+      ],
+      "other_behaviors": [
+        "False plethora.",
+        "Anaemia and chlorosis.",
+        "Gentle motion."
+      ]
+    },
+    {
+      "id": "ferum_phos",
+      "name": "Ferum Phos",
+      "decisive_symptoms": [
+        "Flushing of face.",
+        "Timidity, and acuteness of complaints."
+      ],
+      "other_behaviors": [
+        "Aversion to company.",
+        "Indifference to exciting events.",
+        "Intolerance to interruption."
+      ]
+    },
+    {
+      "id": "gelsemium",
+      "name": "Gelsemium",
+      "decisive_symptoms": [
+        "Thirstless with heavy eyes.",
+        "Very sleepy but cannot sleep."
+      ],
+      "other_behaviors": [
+        "Ailments from vexation.",
+        "Timid and apprehensive.",
+        "Occasional heaviness of limbs."
+      ]
+    },
+    {
+      "id": "hepar_sulph",
+      "name": "Hepar Sulph",
+      "decisive_symptoms": [
+        "Wants to set things on fire.",
+        "Irritable and dissatisfied."
+      ],
+      "other_behaviors": [
+        "Oversensitive to cold, pain and touch.",
+        "Sensation of fish bone stuck in throat.",
+        "Inflammated glands."
+      ]
+    },
+    {
+      "id": "hyoscyamus",
+      "name": "Hyoscyamus",
+      "decisive_symptoms": [
+        "Naughty looks.",
+        "Sings and smiles."
+      ],
+      "other_behaviors": [
+        "Entertains by reciting rhymes or poems.",
+        "Hyperactive and Jesting.",
+        "Heavy eyelids."
+      ]
+    },
+    {
+      "id": "ignatia",
+      "name": "Ignatia",
+      "decisive_symptoms": [
+        "Very studious.",
+        "Sits erect without support."
+      ],
+      "other_behaviors": [
+        "Fever or diarrhoea coming after being upset.",
+        "Desires hot food which ameliorates.",
+        "Hungry after a fever."
+      ]
+    },
+    {
+      "id": "ipecac",
+      "name": "Ipecac",
+      "decisive_symptoms": [
+        "Nausea not relieved by vomiting.",
+        "Clean tongue and haughty."
+      ],
+      "other_behaviors": [
+        "Disdainful humor.",
+        "Difficult to please and contemptuous.",
+        "Pale and clammy looks."
+      ]
+    },
+    {
+      "id": "kali_sulph",
+      "name": "Kali-Sulph",
+      "decisive_symptoms": [
+        "Restless but not anxious.",
+        "Timid, fair and lean."
+      ],
+      "other_behaviors": [
+        "Never well since pneumonia.",
+        "Movements are purely physical.",
+        "The child has no anxiety."
+      ]
+    },
+    {
+      "id": "lachesis",
+      "name": "Lachesis",
+      "decisive_symptoms": [
+        "Jesting with complaints.",
+        "Increased sensitivity to clothes."
+      ],
+      "other_behaviors": [
+        "Speech becomes fast.",
+        "Eructations and hiccoughs with fever.",
+        "Quick in action and perception."
+      ]
+    },
+    {
+      "id": "lycopodium",
+      "name": "Lycopodium",
+      "decisive_symptoms": [
+        "Loves studies, books and knowledge.",
+        "Hard on inferiors, soft with superiors."
+      ],
+      "other_behaviors": [
+        "Serious looking, never smiling child.",
+        "Always keen on thorough investigations.",
+        "Child with a bean shaped face with a bossed forehead."
+      ]
+    },
+    {
+      "id": "merc_sol",
+      "name": "Merc-Sol",
+      "decisive_symptoms": [
+        "Disobedient.",
+        "Excess thirst and salvation."
+      ],
+      "other_behaviors": [
+        "Revolting against whatever is told.",
+        "Intelligent but not at all studious.",
+        "Obese but active."
+      ]
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "decisive_symptoms": [
+        "Disobedient.",
+        "Excess thirst and salvation."
+      ],
+      "other_behaviors": [
+        "Revolting against whatever is told.",
+        "Intelligent but not at all studious.",
+        "Obese but active."
+      ]
+    },
+    {
+      "id": "nat_carb",
+      "name": "Nat-Carb",
+      "decisive_symptoms": [
+        "Fear of being alone.",
+        "Chilly yet the heat of the sun aggravates."
+      ],
+      "other_behaviors": [
+        "Wants to be alone, yet dreads being alone.",
+        "Aversion to certain persons.",
+        "Nibbling hunger at 5 A.M."
+      ]
+    },
+    {
+      "id": "natrum_mur",
+      "name": "Natrum Mur",
+      "decisive_symptoms": [
+        "Non-diligent.",
+        "Aversion to Sun and visitors."
+      ],
+      "other_behaviors": [
+        "Desires loneliness but wants one person in the room.",
+        "Lower lips scaly or cracked in middle.",
+        "Vomiting with fever."
+      ]
+    },
+    {
+      "id": "nux_vomica",
+      "name": "Nux Vomica",
+      "decisive_symptoms": [
+        "Angry when exposed to light or noise.",
+        "Ineffectual urge for stool."
+      ],
+      "other_behaviors": [
+        "Irritable when a question is repeated twice.",
+        "Irritable when asked what he wants.",
+        "Angry at himself."
+      ]
+    },
+    {
+      "id": "nux_mos",
+      "name": "Nux-Mos",
+      "decisive_symptoms": [
+        "Dry mouth with no thirst.",
+        "Excessive Sleep."
+      ],
+      "other_behaviors": [
+        "Dry stools.",
+        "Tendency to blank out without any reason.",
+        "Excessive drowsiness with abdominal pains."
+      ]
+    },
+    {
+      "id": "opium",
+      "name": "Opium",
+      "decisive_symptoms": [
+        "Excessive Sleep.",
+        "Constipated, contended and complainless."
+      ],
+      "other_behaviors": [
+        "Never anxious about his condition.",
+        "Difficult to wake or sleep.",
+        "Irritated when disturbed."
+      ]
+    },
+    {
+      "id": "phosphorus",
+      "name": "Phosphorus",
+      "decisive_symptoms": [
+        "Fearful of dark rooms.",
+        "Desires touch and ice-cream."
+      ],
+      "other_behaviors": [
+        "Aversion to sweets.",
+        "No desire to work or study.",
+        "Loves drawing and painting."
+      ]
+    },
+    {
+      "id": "pulsatilla",
+      "name": "Pulsatilla",
+      "decisive_symptoms": [
+        "Dry mouth with no thirst.",
+        "Desires consolation and open air."
+      ],
+      "other_behaviors": [
+        "Changeable modalities and symptoms.",
+        "Diarrhoea from heavy fried food.",
+        "Involuntary moaning with fever."
+      ]
+    },
+    {
+      "id": "pyrogen",
+      "name": "Pyrogen",
+      "decisive_symptoms": [
+        "Great thirst for cold drinks.",
+        "Discharges are horribly foul."
+      ],
+      "other_behaviors": [
+        "Bones pain.",
+        "In conditions where best selected medicines fail.",
+        "Septic changes."
+      ]
+    },
+    {
+      "id": "rhus_tox",
+      "name": "Rhus-Tox",
+      "decisive_symptoms": [
+        "Physically restless.",
+        "Mild and obsequious."
+      ],
+      "other_behaviors": [
+        "Moves from one seat to another without reason.",
+        "Fever comes usually in the evening.",
+        "Pain and bodyache"
+      ]
+    },
+    {
+      "id": "sanicula",
+      "name": "Sanicula",
+      "decisive_symptoms": [
+        "Thin and old looking.",
+        "Wants to lie on something hard though thin."
+      ],
+      "other_behaviors": [
+        "Profuse sweat on occiput and neck.",
+        "Can swallow solids better than fluids.",
+        "Craves ice cold milk."
+      ]
+    },
+    {
+      "id": "sepia",
+      "name": "Sepia",
+      "decisive_symptoms": [
+        "No desire for any work or amusement.",
+        "Averse to consolation or help."
+      ],
+      "other_behaviors": [
+        "Indifferent to complaints and pain.",
+        "Lies down but does not sleep.",
+        "Indolent."
+      ]
+    },
+    {
+      "id": "silicea",
+      "name": "Silicea",
+      "decisive_symptoms": [
+        "Studious and conscientious.",
+        "Mild yielding but obstinate."
+      ],
+      "other_behaviors": [
+        "Bloated face.",
+        "Aversion to cooked food, desires raw vegetables.",
+        "Extreme desire to study despite high fevers."
+      ]
+    },
+    {
+      "id": "staphysagria",
+      "name": "Staphysagria",
+      "decisive_symptoms": [
+        "Very studious.",
+        "Vexation, mortification and hunger."
+      ],
+      "other_behaviors": [
+        "Wants to study or work without any compulsions",
+        "Acute complaints come after having a quarrel.",
+        "Not able to express it."
+      ]
+    },
+    {
+      "id": "stramonium",
+      "name": "Stramonium",
+      "decisive_symptoms": [
+        "Panic in dark.",
+        "Aversion to bright light also."
+      ],
+      "other_behaviors": [
+        "Singing or talking on one subject.",
+        "Dull face and anxious.",
+        "Chilly and thirsty."
+      ]
+    },
+    {
+      "id": "sulphur",
+      "name": "Sulphur",
+      "decisive_symptoms": [
+        "Hot head and palms.",
+        "Angry with himself."
+      ],
+      "other_behaviors": [
+        "Not ready for investigations.",
+        "Aversion to bath, haphazard hair and dirty appearance.",
+        "Anxiety at night."
+      ]
+    },
+    {
+      "id": "tarentula",
+      "name": "Tarentula",
+      "decisive_symptoms": [
+        "Constant motion of limbs.",
+        "Eats indigestible things i.e. collar of shirt, towels etc."
+      ],
+      "other_behaviors": [
+        "Has to be forced to eat, drink, sleep and get dressed.",
+        "Not afraid of being hit or hurt.",
+        "Loves to trouble others."
+      ]
+    },
+    {
+      "id": "thuja",
+      "name": "Thuja",
+      "decisive_symptoms": [
+        "Diligent and cautious.",
+        "Aversion to vaccinations."
+      ],
+      "other_behaviors": [
+        "Delicate, fat, and stout.",
+        "Afraid to walk, move or jump.",
+        "Crankiness between 5 A.M. and 10 A.M."
+      ]
+    },
+    {
+      "id": "tuberculinum",
+      "name": "Tuberculinum",
+      "decisive_symptoms": [
+        "Desire to wander or travel.",
+        "Desire cold milk and sweets."
+      ],
+      "other_behaviors": [
+        "Long bones, nose and sharp features.",
+        "Loquacity during fever.",
+        "Fearless and hopeful."
+      ]
+    },
+    {
+      "id": "verat_alb",
+      "name": "Verat Alb",
+      "decisive_symptoms": [
+        "Loves lemonade and refreshing drinks.",
+        "Chilly in collapse and perspiring condition."
+      ],
+      "other_behaviors": [
+        "Haughty and hopeful.",
+        "Curses, at the same time prays.",
+        "Singing."
+      ]
+    }
+  ]
+}

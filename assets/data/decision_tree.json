@@ -1,0 +1,249 @@
+{
+  "app_name": "AcuteFlow",
+  "version": "1.0.0",
+  "decision_tree": {
+    "activity_states": [
+      {
+        "id": "no_change",
+        "label": "No Change",
+        "description": "Patient shows baseline activity level with no noticeable shift.",
+        "requires_thermal": false,
+        "requires_hydration": false,
+        "remedies": [
+          "opium",
+          "natrum_mur",
+          "silicea"
+        ]
+      },
+      {
+        "id": "awota",
+        "label": "Angry When Obliged to Answer (AWOTA)",
+        "description": "Irritability or refusal when questioned.",
+        "requires_thermal": true,
+        "requires_hydration": false,
+        "branches": {
+          "chilly": {
+            "remedies": [
+              "nux_vomica",
+              "acid_phos",
+              "arnica",
+              "arsenic",
+              "colocynth"
+            ]
+          },
+          "hot": {
+            "remedies": [
+              "bryonia",
+              "natrum_mur",
+              "pulsatilla"
+            ]
+          }
+        }
+      },
+      {
+        "id": "decreased_activity",
+        "label": "Decreased Activity (Below Normal)",
+        "sub_categories": [
+          {
+            "id": "sleep_overpowering",
+            "label": "Sleep Overpowering",
+            "requires_thermal": false,
+            "requires_hydration": false,
+            "remedies": [
+              "opium",
+              "ant_tart",
+              "nux_mos"
+            ]
+          },
+          {
+            "id": "dullness",
+            "label": "Dullness",
+            "requires_thermal": true,
+            "requires_hydration": true,
+            "matrix": {
+              "chilly_thirstless": [
+                "sepia",
+                "gelsemium",
+                "acid_phos",
+                "ignatia",
+                "staphysagria",
+                "ipecac",
+                "nat_carb",
+                "china",
+                "arsenic"
+              ],
+              "chilly_thirsty": [
+                "nux_vomica",
+                "eupatorium_perfoliatum",
+                "phosphorus",
+                "calcarea_carb",
+                "belladona",
+                "china",
+                "silicea",
+                "hyoscyamus"
+              ],
+              "hot_thirstless": [
+                "pulsatilla",
+                "bryonia",
+                "apis",
+                "lachesis",
+                "sulphur",
+                "lycopodium",
+                "thuja",
+                "opium",
+                "carbo_veg"
+              ],
+              "hot_thirsty": [
+                "bryonia",
+                "natrum_mur",
+                "sulphur",
+                "lycopodium",
+                "apis",
+                "mercury"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "increased_activity",
+        "label": "Increased Activity (Above Normal)",
+        "sub_categories": [
+          {
+            "id": "physical_restlessness",
+            "label": "Physical Restlessness",
+            "requires_thermal": true,
+            "requires_hydration": false,
+            "branches": {
+              "chilly": [
+                "rhus_tox",
+                "tarentula"
+              ],
+              "hot": [
+                "kali_sulph",
+                "merc_sol",
+                "tarentula"
+              ]
+            }
+          },
+          {
+            "id": "mental_anxiety",
+            "label": "Mental Anxiety",
+            "requires_thermal": true,
+            "requires_hydration": true,
+            "matrix": {
+              "chilly_thirstless": [
+                "arsenic",
+                "cina",
+                "china"
+              ],
+              "chilly_thirsty": [
+                "nux_vomica",
+                "chamomilla",
+                "baryta_carb",
+                "ferum_met",
+                "ferum_phos",
+                "china"
+              ],
+              "hot_thirstless": [
+                "pulsatilla",
+                "sulphur",
+                "apis"
+              ],
+              "hot_thirsty": [
+                "tuberculinum",
+                "merc_sol",
+                "chamomilla"
+              ]
+            }
+          },
+          {
+            "id": "verbal",
+            "label": "Verbal",
+            "requires_thermal": false,
+            "requires_hydration": false,
+            "sub_categories": [
+              {
+                "id": "sings",
+                "label": "Sings",
+                "remedies": [
+                  "belladona",
+                  "stramonium",
+                  "opium",
+                  "verat_alb"
+                ]
+              },
+              {
+                "id": "verses_makes",
+                "label": "Makes Verses",
+                "remedies": [
+                  "cannabis_indica",
+                  "lachesis",
+                  "coffea",
+                  "antim_crud",
+                  "natrum_mur"
+                ]
+              },
+              {
+                "id": "loquacity",
+                "label": "Loquacity",
+                "types": [
+                  {
+                    "id": "fast",
+                    "label": "Fast",
+                    "remedies": [
+                      "lachesis",
+                      "pyrogen"
+                    ]
+                  },
+                  {
+                    "id": "irrational",
+                    "label": "Irrational",
+                    "remedies": [
+                      "lachesis",
+                      "coffea"
+                    ]
+                  },
+                  {
+                    "id": "business",
+                    "label": "Business",
+                    "remedies": [
+                      "bryonia"
+                    ]
+                  },
+                  {
+                    "id": "nonsense",
+                    "label": "Nonsense",
+                    "remedies": [
+                      "arg_met"
+                    ]
+                  },
+                  {
+                    "id": "one_subject",
+                    "label": "One Subject",
+                    "remedies": [
+                      "arg_nit",
+                      "cannabis_indica",
+                      "stramonium"
+                    ]
+                  },
+                  {
+                    "id": "curses",
+                    "label": "Curses",
+                    "remedies": [
+                      "anacardium",
+                      "sanicula",
+                      "hepar_sulph",
+                      "nux_vomica",
+                      "tarentula"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
