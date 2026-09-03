@@ -40,6 +40,15 @@ class AcuteFlowTextStyles {
   );
 }
 
+class AcuteFlowIcons {
+  static const String aboveNormal = "assets/icons/above_normal.svg";
+  static const String belowNormal = "assets/icons/below_normal.svg";
+  static const String noChange = "assets/icons/no_change.svg";
+  static const String awota = "assets/icons/awota.svg";
+  static const String arrowBack = "assets/icons/arrow_back.svg";
+  static const String home = "assets/icons/home.svg";
+}
+
 extension ResponsiveScaler on BuildContext {
   static const double _baseWidth = 440.0;
   static const double _tabletBaseWidth = 835.0;
