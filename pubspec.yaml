@@ -39,6 +39,8 @@ dependencies:
   flutter_bloc: ^9.1.1
   flutter_native_splash: ^2.4.8
   hive_flutter: ^1.1.0
+  get_it: ^9.2.1
+  flutter_svg: ^2.3.0
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +70,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/icons/
     - assets/data/
 
   # An image asset can refer to one or more resolution-specific "variants", see
