@@ -4,110 +4,8 @@
   "decision_tree": {
     "activity_states": [
       {
-        "id": "no_change",
-        "label": "No Change",
-        "description": "Patient shows baseline activity level with no noticeable shift.",
-        "requires_thermal": false,
-        "requires_hydration": false,
-        "remedies": [
-          "opium",
-          "natrum_mur",
-          "silicea"
-        ]
-      },
-      {
-        "id": "awota",
-        "label": "Angry When Obliged to Answer (AWOTA)",
-        "description": "Irritability or refusal when questioned.",
-        "requires_thermal": true,
-        "requires_hydration": false,
-        "branches": {
-          "chilly": {
-            "remedies": [
-              "nux_vomica",
-              "acid_phos",
-              "arnica",
-              "arsenic",
-              "colocynth"
-            ]
-          },
-          "hot": {
-            "remedies": [
-              "bryonia",
-              "natrum_mur",
-              "pulsatilla"
-            ]
-          }
-        }
-      },
-      {
-        "id": "decreased_activity",
-        "label": "Decreased Activity (Below Normal)",
-        "sub_categories": [
-          {
-            "id": "sleep_overpowering",
-            "label": "Sleep Overpowering",
-            "requires_thermal": false,
-            "requires_hydration": false,
-            "remedies": [
-              "opium",
-              "ant_tart",
-              "nux_mos"
-            ]
-          },
-          {
-            "id": "dullness",
-            "label": "Dullness",
-            "requires_thermal": true,
-            "requires_hydration": true,
-            "matrix": {
-              "chilly_thirstless": [
-                "sepia",
-                "gelsemium",
-                "acid_phos",
-                "ignatia",
-                "staphysagria",
-                "ipecac",
-                "nat_carb",
-                "china",
-                "arsenic"
-              ],
-              "chilly_thirsty": [
-                "nux_vomica",
-                "eupatorium_perfoliatum",
-                "phosphorus",
-                "calcarea_carb",
-                "belladona",
-                "china",
-                "silicea",
-                "hyoscyamus"
-              ],
-              "hot_thirstless": [
-                "pulsatilla",
-                "bryonia",
-                "apis",
-                "lachesis",
-                "sulphur",
-                "lycopodium",
-                "thuja",
-                "opium",
-                "carbo_veg"
-              ],
-              "hot_thirsty": [
-                "bryonia",
-                "natrum_mur",
-                "sulphur",
-                "lycopodium",
-                "apis",
-                "mercury"
-              ]
-            }
-          }
-        ]
-      },
-      {
         "id": "increased_activity",
-        "label": "Increased Activity (Above Normal)",
+        "label": "Above Normal",
         "sub_categories": [
           {
             "id": "physical_restlessness",
@@ -243,6 +141,108 @@
             ]
           }
         ]
+      },
+      {
+        "id": "decreased_activity",
+        "label": "Below Normal",
+        "sub_categories": [
+          {
+            "id": "sleep_overpowering",
+            "label": "Sleep Overpowering",
+            "requires_thermal": false,
+            "requires_hydration": false,
+            "remedies": [
+              "opium",
+              "ant_tart",
+              "nux_mos"
+            ]
+          },
+          {
+            "id": "dullness",
+            "label": "Dullness",
+            "requires_thermal": true,
+            "requires_hydration": true,
+            "matrix": {
+              "chilly_thirstless": [
+                "sepia",
+                "gelsemium",
+                "acid_phos",
+                "ignatia",
+                "staphysagria",
+                "ipecac",
+                "nat_carb",
+                "china",
+                "arsenic"
+              ],
+              "chilly_thirsty": [
+                "nux_vomica",
+                "eupatorium_perfoliatum",
+                "phosphorus",
+                "calcarea_carb",
+                "belladona",
+                "china",
+                "silicea",
+                "hyoscyamus"
+              ],
+              "hot_thirstless": [
+                "pulsatilla",
+                "bryonia",
+                "apis",
+                "lachesis",
+                "sulphur",
+                "lycopodium",
+                "thuja",
+                "opium",
+                "carbo_veg"
+              ],
+              "hot_thirsty": [
+                "bryonia",
+                "natrum_mur",
+                "sulphur",
+                "lycopodium",
+                "apis",
+                "mercury"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "no_change",
+        "label": "No Change",
+        "description": "Patient shows baseline activity level with no noticeable shift.",
+        "requires_thermal": false,
+        "requires_hydration": false,
+        "remedies": [
+          "opium",
+          "natrum_mur",
+          "silicea"
+        ]
+      },
+      {
+        "id": "awota",
+        "label": "AWOTA",
+        "description": "Irritability or refusal when questioned.",
+        "requires_thermal": true,
+        "requires_hydration": false,
+        "branches": {
+          "chilly": {
+            "remedies": [
+              "nux_vomica",
+              "acid_phos",
+              "arnica",
+              "arsenic",
+              "colocynth"
+            ]
+          },
+          "hot": {
+            "remedies": [
+              "bryonia",
+              "natrum_mur",
+              "pulsatilla"
+            ]
+          }
+        }
       }
     ]
   }
