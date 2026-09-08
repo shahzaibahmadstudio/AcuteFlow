@@ -7,8 +7,13 @@ import 'package:acuteflow/features/decision_tree/data/models/decision_tree_node_
 
 class ActivityStateCategoryScreen extends StatelessWidget {
   final DecisionTreeNodeModel parentNode;
+  final DecisionTreeNodeModel? rootNode;
 
-  const ActivityStateCategoryScreen({super.key, required this.parentNode});
+  const ActivityStateCategoryScreen({
+    super.key,
+    required this.parentNode,
+    this.rootNode,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +43,7 @@ class ActivityStateCategoryScreen extends StatelessWidget {
               SizedBox(height: context.s(48)),
               Center(
                 child: SvgPicture.asset(
-                  iconForNodeId(parentNode.id),
+                  iconForNodeId(rootNode?.id ?? parentNode.id),
                   height: context.s(64),
                   width: context.s(64),
                   colorFilter: const ColorFilter.mode(
@@ -68,7 +73,11 @@ class ActivityStateCategoryScreen extends StatelessWidget {
                         .map(
                           (child) => _OptionPill(
                             label: child.label ?? '',
-                            onTap: () => navigateFromNode(context, child),
+                            onTap: () => navigateFromNode(
+                              context,
+                              child,
+                              rootNode: rootNode ?? parentNode,
+                            ),
                           ),
                         )
                         .toList(),

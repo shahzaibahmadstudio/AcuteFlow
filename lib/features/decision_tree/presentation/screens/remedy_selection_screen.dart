@@ -12,22 +12,24 @@ import 'package:acuteflow/core/utils/icon_mapper.dart';
 
 class RemedySelectorScreen extends StatelessWidget {
   final DecisionTreeNodeModel node;
+  final DecisionTreeNodeModel? rootNode;
 
-  const RemedySelectorScreen({super.key, required this.node});
+  const RemedySelectorScreen({super.key, required this.node, this.rootNode});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => sl<RemedySelectionCubit>()..init(node),
-      child: _RemedySelectorView(node: node),
+      child: _RemedySelectorView(node: node, rootNode: rootNode),
     );
   }
 }
 
 class _RemedySelectorView extends StatelessWidget {
   final DecisionTreeNodeModel node;
+  final DecisionTreeNodeModel? rootNode;
 
-  const _RemedySelectorView({required this.node});
+  const _RemedySelectorView({required this.node, this.rootNode});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,7 @@ class _RemedySelectorView extends StatelessWidget {
               SizedBox(height: context.s(48)),
               Center(
                 child: SvgPicture.asset(
-                  iconForNodeId(node.id),
+                  iconForNodeId(rootNode?.id ?? node.id),
                   height: context.s(64),
                   width: context.s(64),
                   colorFilter: const ColorFilter.mode(
