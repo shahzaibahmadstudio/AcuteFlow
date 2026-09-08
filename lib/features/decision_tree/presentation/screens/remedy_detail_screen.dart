@@ -21,6 +21,7 @@ class RemedyDetailsScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: context.s(24)),
                   GestureDetector(
                     onTap: () => Navigator.of(context).pop(),
                     child: SvgPicture.asset(
@@ -51,7 +52,7 @@ class RemedyDetailsScreen extends StatelessWidget {
             Positioned(
               left: 0,
               right: 0,
-              bottom: context.s(48),
+              bottom: context.s(32),
               child: Center(
                 child: GestureDetector(
                   onTap: () =>

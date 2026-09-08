@@ -27,7 +27,7 @@ class ActivityStateCategoryScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: context.s(24)),
+              SizedBox(height: context.s(48)),
               GestureDetector(
                 onTap: () => Navigator.of(context).pop(),
                 child: SvgPicture.asset(
