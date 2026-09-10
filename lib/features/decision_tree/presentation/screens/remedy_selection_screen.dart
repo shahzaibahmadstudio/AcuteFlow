@@ -36,9 +36,9 @@ class _RemedySelectorView extends StatelessWidget {
     return Scaffold(
       backgroundColor: AcuteFlowColors.secondaryWhite,
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: context.s(32))
-              .copyWith(top: context.s(24), bottom: context.s(40)),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: context.s(24))
+              .copyWith(top: context.s(48), bottom: context.s(48)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -55,133 +55,151 @@ class _RemedySelectorView extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: context.s(48)),
+              SizedBox(height: context.s(32)),
               Center(
                 child: SvgPicture.asset(
                   iconForNodeId(rootNode?.id ?? node.id),
-                  height: context.s(64),
-                  width: context.s(64),
+                  height: context.s(54),
+                  width: context.s(54),
                   colorFilter: const ColorFilter.mode(
                     AcuteFlowColors.primaryNavy,
                     BlendMode.srcIn,
                   ),
                 ),
               ),
-              SizedBox(height: context.s(24)),
+              SizedBox(height: context.s(16)),
               Center(
                 child: SizedBox(
                   width: context.s(324),
                   child: Text(
                     "Understand the patient core thermal sensitivity and fluid needs and select an ideal remedy",
                     textAlign: TextAlign.center,
-                    style: AcuteFlowTextStyles.i18,
+                    style: AcuteFlowTextStyles.i18.copyWith(height: 1.2),
                   ),
                 ),
               ),
-              SizedBox(height: context.s(40)),
-              BlocBuilder<RemedySelectionCubit, RemedySelectionState>(
-                builder: (context, state) {
-                  return Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      if (state.showThermalToggle) ...[
-                        Row(
-                          children: [
-                            Expanded(
-                              child: _ToggleChip(
-                                label: "Chilly",
-                                selected:
-                                    state.thermal == ThermalSensitivity.chilly,
-                                variant: _ToggleVariant.primary,
-                                radiusPosition: _RadiusPosition.left,
-                                onTap: () => context
-                                    .read<RemedySelectionCubit>()
-                                    .selectThermal(ThermalSensitivity.chilly),
+              SizedBox(height: context.s(48)),
+              Expanded(
+                child: BlocBuilder<RemedySelectionCubit, RemedySelectionState>(
+                  builder: (context, state) {
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        if (state.showThermalToggle) ...[
+                          Row(
+                            children: [
+                              Expanded(
+                                child: _ToggleChip(
+                                  label: "Chilly",
+                                  selected:
+                                      state.thermal ==
+                                      ThermalSensitivity.chilly,
+                                  variant: _ToggleVariant.primary,
+                                  radiusPosition: _RadiusPosition.left,
+                                  onTap: () => context
+                                      .read<RemedySelectionCubit>()
+                                      .selectThermal(ThermalSensitivity.chilly),
+                                ),
+                              ),
+                              Expanded(
+                                child: _ToggleChip(
+                                  label: "Hot",
+                                  selected:
+                                      state.thermal == ThermalSensitivity.hot,
+                                  variant: _ToggleVariant.primary,
+                                  radiusPosition: _RadiusPosition.right,
+                                  onTap: () => context
+                                      .read<RemedySelectionCubit>()
+                                      .selectThermal(ThermalSensitivity.hot),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                        if (state.showThermalToggle && state.showFluidToggle)
+                          SizedBox(height: context.s(12)),
+                        if (state.showFluidToggle) ...[
+                          Row(
+                            children: [
+                              Expanded(
+                                child: _ToggleChip(
+                                  label: "Thirsty",
+                                  selected: state.fluid == FluidNeed.thirsty,
+                                  variant: _ToggleVariant.secondary,
+                                  radiusPosition: _RadiusPosition.left,
+                                  onTap: () => context
+                                      .read<RemedySelectionCubit>()
+                                      .selectFluid(FluidNeed.thirsty),
+                                ),
+                              ),
+                              Expanded(
+                                child: _ToggleChip(
+                                  label: "Thirstless",
+                                  selected: state.fluid == FluidNeed.thirstless,
+                                  variant: _ToggleVariant.secondary,
+                                  radiusPosition: _RadiusPosition.right,
+                                  onTap: () => context
+                                      .read<RemedySelectionCubit>()
+                                      .selectFluid(FluidNeed.thirstless),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                        if (state.showThermalToggle || state.showFluidToggle)
+                          SizedBox(height: context.s(36)),
+
+                        Text(
+                          "Suggested Remedies",
+                          style: AcuteFlowTextStyles.i20,
+                        ),
+                        SizedBox(height: context.s(2)),
+                        Text(
+                          "Click to view details",
+                          style: AcuteFlowTextStyles.i16,
+                        ),
+                        SizedBox(height: context.s(18)),
+                        Expanded(
+                          child: ScrollConfiguration(
+                            behavior: ScrollConfiguration.of(context)
+                                .copyWith(scrollbars: false),
+                            child: SingleChildScrollView(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  if (state.isLoading)
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: context.s(24),
+                                      ),
+                                      child: const Center(
+                                        child: CircularProgressIndicator(),
+                                      ),
+                                    )
+                                  else if (state.error != null)
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        vertical: context.s(24),
+                                      ),
+                                      child: Text(
+                                        state.error!,
+                                        style: AcuteFlowTextStyles.i16,
+                                      ),
+                                    )
+                                  else
+                                    ..._buildRemedyRows(
+                                      context,
+                                      state.remedies,
+                                    ),
+                                ],
                               ),
                             ),
-                            Expanded(
-                              child: _ToggleChip(
-                                label: "Hot",
-                                selected:
-                                    state.thermal == ThermalSensitivity.hot,
-                                variant: _ToggleVariant.primary,
-                                radiusPosition: _RadiusPosition.right,
-                                onTap: () => context
-                                    .read<RemedySelectionCubit>()
-                                    .selectThermal(ThermalSensitivity.hot),
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
                       ],
-                      if (state.showThermalToggle && state.showFluidToggle)
-                        SizedBox(height: context.s(8)),
-                      if (state.showFluidToggle) ...[
-                        Row(
-                          children: [
-                            Expanded(
-                              child: _ToggleChip(
-                                label: "Thirsty",
-                                selected: state.fluid == FluidNeed.thirsty,
-                                variant: _ToggleVariant.secondary,
-                                radiusPosition: _RadiusPosition.left,
-                                onTap: () => context
-                                    .read<RemedySelectionCubit>()
-                                    .selectFluid(FluidNeed.thirsty),
-                              ),
-                            ),
-                            Expanded(
-                              child: _ToggleChip(
-                                label: "Thirstless",
-                                selected: state.fluid == FluidNeed.thirstless,
-                                variant: _ToggleVariant.secondary,
-                                radiusPosition: _RadiusPosition.right,
-                                onTap: () => context
-                                    .read<RemedySelectionCubit>()
-                                    .selectFluid(FluidNeed.thirstless),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                      if (state.showThermalToggle || state.showFluidToggle)
-                        SizedBox(height: context.s(32)),
-
-                      Text(
-                        "Suggested Remedies",
-                        style: AcuteFlowTextStyles.i20,
-                      ),
-                      SizedBox(height: context.s(4)),
-                      Text(
-                        "Click to view details",
-                        style: AcuteFlowTextStyles.i16,
-                      ),
-                      SizedBox(height: context.s(16)),
-
-                      if (state.isLoading)
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                            vertical: context.s(24),
-                          ),
-                          child: const Center(
-                            child: CircularProgressIndicator(),
-                          ),
-                        )
-                      else if (state.error != null)
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                            vertical: context.s(24),
-                          ),
-                          child: Text(
-                            state.error!,
-                            style: AcuteFlowTextStyles.i16,
-                          ),
-                        )
-                      else
-                        ..._buildRemedyRows(context, state.remedies),
-                    ],
-                  );
-                },
+                    );
+                  },
+                ),
               ),
             ],
           ),
@@ -257,7 +275,7 @@ class _ToggleChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bool isPrimary = variant == _ToggleVariant.primary;
-    final double height = isPrimary ? context.s(64) : context.s(48);
+    final double height = isPrimary ? context.s(56) : context.s(48);
     final radius = Radius.circular(context.s(24));
     final borderRadius = radiusPosition == _RadiusPosition.left
         ? BorderRadius.only(topLeft: radius, bottomLeft: radius)
@@ -275,21 +293,17 @@ class _ToggleChip extends StatelessWidget {
       } else {
         bgColor = AcuteFlowColors.secondaryWhite;
         textColor = Colors.black;
-        border = Border.all(
-          color: AcuteFlowColors.primaryNavy,
-          width: context.s(2),
-        );
       }
     } else {
       if (selected) {
-        bgColor = AcuteFlowColors.primaryNavy.withAlpha(61);
+        bgColor = AcuteFlowColors.primaryNavy.withAlpha(64);
         textColor = AcuteFlowColors.primaryNavy;
         border = null;
       } else {
         bgColor = AcuteFlowColors.secondaryWhite;
         textColor = Colors.black;
         border = Border.all(
-          color: AcuteFlowColors.primaryNavy.withAlpha(61),
+          color: AcuteFlowColors.primaryNavy.withAlpha(64),
           width: context.s(2),
         );
       }
@@ -307,7 +321,7 @@ class _ToggleChip extends StatelessWidget {
           boxShadow: isPrimary
               ? [
                   BoxShadow(
-                    color: AcuteFlowColors.primaryNavy.withAlpha(31),
+                    color: AcuteFlowColors.primaryNavy.withAlpha(32),
                     blurRadius: context.s(32),
                     spreadRadius: context.s(8),
                     offset: Offset(0, context.s(8)),
@@ -319,7 +333,7 @@ class _ToggleChip extends StatelessWidget {
           label,
           style: AcuteFlowTextStyles.i18.copyWith(
             fontSize: context.sp(18),
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             color: textColor,
           ),
         ),
@@ -347,23 +361,15 @@ class _RemedyPill extends StatelessWidget {
           borderRadius: BorderRadius.circular(context.s(36)),
           border: Border.all(
             color: AcuteFlowColors.primaryNavy,
-            width: context.s(4),
+            width: context.s(2),
           ),
-          boxShadow: [
-            BoxShadow(
-              color: AcuteFlowColors.primaryNavy.withAlpha(31),
-              blurRadius: context.s(32),
-              spreadRadius: context.s(8),
-              offset: Offset(0, context.s(8)),
-            ),
-          ],
         ),
         child: Text(
           label,
           textAlign: TextAlign.center,
           style: AcuteFlowTextStyles.i18.copyWith(
             fontSize: context.sp(18),
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w700,
             color: Colors.black,
           ),
         ),

@@ -29,26 +29,26 @@ class _HomeView extends StatelessWidget {
       backgroundColor: AcuteFlowColors.secondaryWhite,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: context.s(20)),
+          padding: EdgeInsets.symmetric(horizontal: context.s(24)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: context.s(56)),
+              SizedBox(height: context.s(64)),
               Text(
                 "AcuteFlow",
                 textAlign: TextAlign.center,
                 style: AcuteFlowTextStyles.i24,
               ),
-              SizedBox(height: context.s(38)),
+              SizedBox(height: context.s(24)),
               SizedBox(
                 width: context.s(324),
                 child: Text(
                   "To map the right remedy path, please describe the patient's activity state.",
                   textAlign: TextAlign.center,
-                  style: AcuteFlowTextStyles.i18,
+                  style: AcuteFlowTextStyles.i18.copyWith(height: 1.2),
                 ),
               ),
-              SizedBox(height: context.s(64)),
+              SizedBox(height: context.s(48)),
               Expanded(
                 child: BlocBuilder<ActivityStateCubit, ActivityStateState>(
                   builder: (context, state) {
@@ -127,13 +127,9 @@ class _ActivityCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: AcuteFlowColors.secondaryWhite,
           borderRadius: BorderRadius.circular(context.s(48)),
-          border: Border.all(
-            color: AcuteFlowColors.primaryNavy,
-            width: context.s(4),
-          ),
           boxShadow: [
             BoxShadow(
-              color: AcuteFlowColors.primaryNavy.withAlpha(31),
+              color: AcuteFlowColors.primaryNavy.withAlpha(32),
               blurRadius: context.s(32),
               spreadRadius: context.s(8),
               offset: Offset(0, context.s(8)),
@@ -158,7 +154,7 @@ class _ActivityCard extends StatelessWidget {
               textAlign: TextAlign.center,
               style: AcuteFlowTextStyles.i18.copyWith(
                 fontSize: context.sp(18),
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w700,
                 color: Colors.black,
               ),
             ),

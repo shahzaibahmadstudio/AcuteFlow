@@ -30,7 +30,7 @@ class AcuteFlowTextStyles {
 
   static final TextStyle i24 = GoogleFonts.inter(
     color: AcuteFlowColors.primaryNavy,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w900,
     fontSize: 24,
   );
   static final TextStyle i32 = GoogleFonts.inter(
